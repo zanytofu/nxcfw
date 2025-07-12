@@ -1,0 +1,14 @@
+[
+    {
+        "name": "off",
+        "dvfs": "0"
+    },
+    {
+        "name": "official service method",
+        "dvfs": "1"
+    },
+    {
+        "name": "hijack method",
+        "dvfs": "2"
+    }
+]
