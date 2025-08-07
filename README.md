@@ -1,3 +1,5 @@
+[![Release](https://github.com/zanytofu/nxcfw/actions/workflows/release.yaml/badge.svg)](https://github.com/zanytofu/nxcfw/actions/workflows/release.yaml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # nxcfw
 
 Custom firmware pack.
