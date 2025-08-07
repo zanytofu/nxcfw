@@ -1,0 +1,30 @@
+[project]
+name = "nxcfw"
+version = "0.0.0"
+description = "Custom firmware pack"
+authors = [
+  { name = "zanytofu" },
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "bump-my-version>=1.2.0",
+]
+
+[tool.setuptools]
+packages = []
+
+[tool.bumpversion]
+current_version = "0.0.0"
+tag = true
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+sign_tags = true
+commit = true
+message = "chore: release {new_version}"
+push = true
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
