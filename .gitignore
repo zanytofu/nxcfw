@@ -76,3 +76,18 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,macos,windows
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python build artifacts
+*.egg-info/
+build/
+dist/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
