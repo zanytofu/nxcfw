@@ -1,0 +1,4 @@
+/atmosphere/config/system_settings.ini
+/bootloader/nyx.ini
+/config/sys-clk/config.ini
+/config/sphaira/config.ini
