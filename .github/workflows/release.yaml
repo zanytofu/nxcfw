@@ -37,6 +37,7 @@ jobs:
           cp -r switch release-temp/
           cp -r exosphere.ini release-temp/
           cp -r hbmenu.nro release-temp/
+          cp -r payload.bin release-temp/
 
           cd release-temp
           zip -r ../nxcfw.zip .
