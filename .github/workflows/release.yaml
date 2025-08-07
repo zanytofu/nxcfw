@@ -24,6 +24,25 @@ jobs:
         with:
           node-version: latest
 
-      - run: pnpm dlx changelogithub
+      - name: Create release package
+        run: |
+          mkdir -p release-temp
+
+          cp -r SaltySD release-temp/
+          cp -r atmosphere release-temp/
+          cp -r bootloader release-temp/
+          cp -r config release-temp/
+          cp -r switch release-temp/
+          cp -r exosphere.ini release-temp/
+          cp -r hbmenu.nro release-temp/
+
+          cd release-temp
+          zip -r ../nxcfw.zip .
+
+          cd ..
+          rm -rf release-temp
+
+      - name: Generate Release with changelogithub
+        run: pnpm dlx changelogithub --assets nxcfw.zip
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
