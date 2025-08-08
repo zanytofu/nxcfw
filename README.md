@@ -85,4 +85,7 @@ The script will fetch the latest stable and pre-release versions from GitHub and
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This package is a collection of third-party packages, each under its own license.
+Please see the [LICENSE](LICENSE) file for details.
+
+Any original code in this repository is licensed under the MIT License.

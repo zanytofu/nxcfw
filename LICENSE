@@ -1,4 +1,24 @@
-MIT License
+Custom License Notice for nxcfw
+=============================================
+
+Copyright (c) 2025 zanytofu
+
+This package is distributed as a collection of software packages, some of which
+are created and maintained by third parties. The included third-party packages
+are each subject to their own license terms, which are provided in their
+respective directories or documentation.
+
+The code and files created specifically for nxcfw by zanytofu
+are licensed under the MIT License (see below).
+
+For all other included packages, please refer to their individual license files
+or documentation for more information on their terms and conditions.
+
+You must comply with the license terms of each included package.
+
+---
+MIT License (for original code in this package)
+----------------------
 
 Copyright (c) 2025 zanytofu
 
