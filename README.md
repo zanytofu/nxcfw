@@ -64,6 +64,25 @@ bump-my-version bump minor --dry-run --verbose
 4. Push the commit and tag to remote
 5. GitHub Actions automatically creates a release with changelog and assets
 
+### Update Checker
+
+This script checks for newer package versions from `packages.yaml`.
+
+1. **Configure GitHub Token (Optional):**
+
+Create a `.env` file by copying `env.example` and add your GitHub personal access token. This is only required if you exceed the GitHub API rate limit for unauthenticated requests.
+
+```bash
+cp env.example .env
+```
+
+2. **Run the checker:**
+```bash
+python update_checker.py
+```
+
+The script will fetch the latest stable and pre-release versions from GitHub and display a summary of available updates.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

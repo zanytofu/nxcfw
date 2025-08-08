@@ -9,6 +9,9 @@ readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
   "bump-my-version>=1.2.0",
+  "dotenv",
+  "pyyaml",
+  "requests",
 ]
 
 [tool.setuptools]
