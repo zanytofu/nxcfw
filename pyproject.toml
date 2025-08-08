@@ -22,7 +22,6 @@ tag_message = "Bump version: {current_version} → {new_version}"
 sign_tags = true
 commit = true
 message = "chore: release {new_version}"
-push = true
 
 [[tool.bumpversion.files]]
 filename = "pyproject.toml"
