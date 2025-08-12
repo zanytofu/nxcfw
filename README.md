@@ -8,7 +8,22 @@ Custom firmware pack for Nintendo Switch.
 
 This package includes a curated collection of custom firmware components:
 
-TODO
+- [Atmosphere](https://github.com/Atmosphere-NX/Atmosphere)
+- [Hekate](https://github.com/CTCaer/hekate)
+- [Sys-patch](https://github.com/impeeza/sys-patch)
+- [OC-Switchcraft-EOS](https://github.com/halop/OC-Switchcraft-EOS)
+- [Ultrahand-Overlay](https://github.com/ppkantorski/Ultrahand-Overlay)
+- [Status-Monitor-Overlay](https://github.com/ppkantorski/Status-Monitor-Overlay)
+- [Sys-clk-overlay](https://github.com/ppkantorski/sys-clk)
+- [NX-ovlloader](https://github.com/ppkantorski/nx-ovlloader)
+- [Sysmodules](https://github.com/ppkantorski/ovl-sysmodules)
+- [SaltyNX](https://github.com/masagrator/SaltyNX)
+- [FPSLocker](https://github.com/masagrator/FPSLocker)
+- [NX-FanControl](https://github.com/Zathawo/NX-FanControl)
+- [ReverseNX-RT](https://github.com/dominatorul/ReverseNX-RT)
+- [AIO Switch Updater](https://github.com/HamletDuFromage/aio-switch-updater)
+- [Lockpick RCM](https://github.com/s1204IT/Lockpick_RCM)
+- [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer)
 
 ## Installation
 
