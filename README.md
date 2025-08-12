@@ -27,13 +27,13 @@ This package includes a curated collection of custom firmware components:
 
 ## Installation
 
-1. Download the latest `nxcfw.zip` file from the [releases page](https://github.com/zanytofu/nxcfw/releases)
-2. Prepare your SD card:
-  - If you are using a new SD card, format it to **FAT32**
-  - Delete all files and folders from your SD card except `Nintendo/` and `emuMMC/` (if present)
-3. Extract the contents of `nxcfw.zip` to the root of your SD card
-4. Insert the SD card into your Nintendo Switch
-5. Boot your console following standard CFW installation procedures
+1. **Download** the latest `nxcfw.zip` file from the [releases page](https://github.com/zanytofu/nxcfw/releases).
+2. **Prepare your SD card:**
+    - If you are using a **new SD card**, format it to **FAT32**.
+    - Delete all files and folders from your SD card **except** for `Nintendo/` and `emuMMC/` (if present).
+3. **Extract** the contents of `nxcfw.zip` to the **root** of your SD card.
+4. **Insert** the SD card into your Nintendo Switch console.
+5. **Boot your console** using your usual custom firmware (CFW) launch method.
 
 ---
 
