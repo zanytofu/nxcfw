@@ -78,7 +78,7 @@ cp env.example .env
 
 2. **Run the checker:**
 ```bash
-python update_checker.py
+python scripts/update_checker.py
 ```
 
 The script will fetch the latest stable and pre-release versions from GitHub and display a summary of available updates.

@@ -27,25 +27,9 @@ jobs:
           node-version: latest
 
       - name: Create release package
-        run: |
-          mkdir -p release-temp
+        run: zip -r nxcfw.zip src
 
-          cp -r SaltySD release-temp/
-          cp -r atmosphere release-temp/
-          cp -r bootloader release-temp/
-          cp -r config release-temp/
-          cp -r switch release-temp/
-          cp -r exosphere.ini release-temp/
-          cp -r hbmenu.nro release-temp/
-          cp -r payload.bin release-temp/
-
-          cd release-temp
-          zip -r ../nxcfw.zip .
-
-          cd ..
-          rm -rf release-temp
-
-      - name: Generate Release with changelogithub
+      - name: Generate release notes
         run: pnpm dlx changelogithub --assets nxcfw.zip
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
