@@ -27,7 +27,10 @@ jobs:
           node-version: latest
 
       - name: Create release package
-        run: zip -r nxcfw.zip src
+        run: |
+          cd src
+          zip -r ../nxcfw.zip .
+          cd ..
 
       - name: Generate release notes
         run: pnpm dlx changelogithub --assets nxcfw.zip
