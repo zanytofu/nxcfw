@@ -20,6 +20,7 @@ This package includes a curated collection of custom firmware components:
 - [SaltyNX](https://github.com/masagrator/SaltyNX)
 - [FPSLocker](https://github.com/masagrator/FPSLocker)
 - [ReverseNX-RT](https://github.com/dominatorul/ReverseNX-RT)
+- [MissionControl](https://github.com/ndeadly/MissionControl) (BLE branch, not public)
 - [AIO Switch Updater](https://github.com/HamletDuFromage/aio-switch-updater)
 - [Lockpick RCM](https://github.com/s1204IT/Lockpick_RCM)
 - [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer)
