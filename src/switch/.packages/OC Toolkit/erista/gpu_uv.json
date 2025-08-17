@@ -13,11 +13,5 @@
         "name": "2",
         "label": "       high UV table         2",
         "hex": "02"
-    },
-    {
-        "name": "3",
-        "label": "       Custom static        3",
-        "hex": "03"
     }
-
 ]
