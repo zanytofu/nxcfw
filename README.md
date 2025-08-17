@@ -34,6 +34,11 @@ This package includes a curated collection of custom firmware components:
 3. **Extract** the contents of `nxcfw.zip` to the **root** of your SD card.
 4. **Insert** the SD card into your Nintendo Switch console.
 5. **Boot your console** using your usual custom firmware (CFW) launch method.
+6. **Configure autoboot (First launch only):**
+    - On first launch, you will be redirected to Hekate.
+    - Navigate to **Options** → **Auto Boot**.
+    - Select your preferred boot option: **CFW (emuMMC)**, **CFW (sysMMC)** or **OFW (stock)**.
+    - Press **Save Options** to apply your selection.
 
 ---
 
