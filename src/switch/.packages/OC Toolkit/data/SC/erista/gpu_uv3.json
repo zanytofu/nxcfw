@@ -1,5 +1,10 @@
 [
     {
+        "name": "Auto",
+        "hex": "0000",
+        "label": "Auto"
+    },
+    {
         "name": "disabled",
         "hex": "D007",
         "label": "disabled"
