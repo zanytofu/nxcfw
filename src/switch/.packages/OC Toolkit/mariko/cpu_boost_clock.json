@@ -43,5 +43,10 @@
         "name": "2601 MHz",
         "label": "2601 MHz",
         "hex": "28B027"
+    },
+    {
+        "name": "2703 MHz",
+        "label": "2703 MHz",
+        "hex": "983E29"
     }
 ]
