@@ -19,7 +19,7 @@
     { "name": "-15 mV", "dvfs": "15" },
     { "name": "-10 mV", "dvfs": "10" },
     { "name": "-5 mV", "dvfs": "5" },
-    { "name": "Auto", "dvfs": "0" },
+    { "name": " 0 mV", "dvfs": "0" },
     { "name": "+5 mV", "dvfs": "-5" },
     { "name": "+10 mV", "dvfs": "-10" },
     { "name": "+15 mV", "dvfs": "-15" },

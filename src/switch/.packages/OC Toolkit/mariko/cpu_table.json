@@ -15,13 +15,13 @@
         "hex": "02"
     },
     {
-        "name": "Shift Fix 1",
-        "label": "Shift Fix 1",
-        "hex": "03"
+        "name": "1683 MHz Tbreak",
+        "label": "1683 MHz Tbreak",
+        "hex": "04"
     },
     {
-        "name": "Shift Fix 2",
-        "label": "Shift Fix 2",
-        "hex": "04"
+        "name": "Helios Table",
+        "label": "Helios Table",
+        "hex": "05"
     }
 ]
