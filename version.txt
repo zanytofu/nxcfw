@@ -1,0 +1,9 @@
+NXCFW v0.11.0
+
+Atmosphere (v1.11.1)
+Hekate (v6.5.2)
+Horizon-OC (v1.2.1)
+
+Compatible firmware 22.1.0
+
+Source: https://github.com/zanytofu/nxcfw

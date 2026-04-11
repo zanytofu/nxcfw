@@ -30,3 +30,8 @@ message = "chore: release {new_version}"
 filename = "pyproject.toml"
 search = 'version = "{current_version}"'
 replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "version.txt"
+search = "NXCFW v{current_version}"
+replace = "NXCFW v{new_version}"
