@@ -2,4 +2,4 @@
 /bootloader/hekate_ipl.ini
 /bootloader/nyx.ini
 /config/sphaira/config.ini
-/config/sys-clk/config.ini
+/config/horizon-oc/config.ini
