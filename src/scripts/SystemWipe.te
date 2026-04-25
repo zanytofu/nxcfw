@@ -1,0 +1,151 @@
+#REQUIRE KEYS
+# Important saves that must be preserved to prevent bricking
+# - 8000000000000120: Content meta database (required for boot)
+# - 8000000000000053: DeviceSettings (battery calibration, IMPORTANT for lite)
+# - 80000000000000d1: System save
+# The index save (8000000000000000) is DELETED to let system rebuild fresh
+is=["8000000000000120","8000000000000053","80000000000000d1"]
+p=println
+pr=print
+pe={pause() exit()}
+println("")
+println("")
+println("")
+println("")
+color(0x00CCCCCC)
+p("System wiper\n")
+op=["Exit","Wipe sysmmc"].copy()
+if (emu()){op+"Wipe emummc"}
+r=menu(op,0)clear()
+if(r==0){exit()}
+if(r==1){
+	mount=mountsys
+	selected_target = "sysmmc"
+}
+if(r==2){
+	mount=mountemu
+	selected_target = "emummc"
+}
+if(mount("SYSTEM")){p("Mount failed!")pe()}
+clear()
+
+border = {
+	setpixels(0,0,1279,19,border_color)
+	setpixels(0,700,1279,719,border_color)
+	setpixels(0,20,19,699,border_color)
+	setpixels(1260,20,1279,699,border_color)
+}
+
+i = 10
+x_pos = 10
+y_pos = 12
+
+["WARNING!!!", 
+	"", 
+	"Do you really want to wipe your system?", 
+	"This will remove:", 
+	"- Your Save Data", 
+	"- Your Game Data", 
+	"- Your User Data", 
+	"",
+	"Restoring an emmc backup is always preferable over wiping.",
+	"Please only use this as a last resort.",
+	"This script is intended to be used in aid of unbricking."
+].foreach("line") 
+{
+	printpos(x_pos, y_pos)
+	y_pos = y_pos + 1
+	print(line)
+}
+
+# Check for content meta database (required for boot)
+if (!fsexists("bis:/save/"+is[0])){
+	[
+		"",
+		"WARNING: Content meta database (8000000000000120) is missing!",
+		"Cannot safely wipe without this save!",
+		"System will brick if you continue!"
+	].foreach("line")
+	{
+		printpos(x_pos, y_pos)
+		y_pos = y_pos + 1
+		print(line)
+	}
+	y_pos = y_pos + 2
+	printpos(x_pos, y_pos)
+	print("Press any button to exit")
+	pause()
+	exit()
+}
+
+# Check for DeviceSettings save (battery calibration, important for lite)
+if (!fsexists("bis:/save/"+is[1])){
+	[
+		"",
+		"WARNING: DeviceSettings save (8000000000000053) is missing!",
+		"Battery calibration will be reset to defaults.",
+		"This is UNSAFE for lite systems!"
+	].foreach("line")
+	{
+		printpos(x_pos, y_pos)
+		y_pos = y_pos + 1
+		print(line)
+	}
+}
+
+time = 5000
+y_pos = y_pos + 4
+
+while (i > 0)
+{
+	i = i - 1
+	
+	if (i % 2 == 0){
+		border_color = 0xFF0000
+	}.else() {
+		border_color = 0x000000
+	}
+	
+	border()
+	sleep(500)
+	time = time - 500
+	printpos(x_pos, y_pos)
+	print("Waiting for", time / 1000, "seconds")
+}
+
+printpos(x_pos, y_pos)
+print("Ready to wipe", selected_target, "           ")
+y_pos = y_pos + 1
+printpos(x_pos, y_pos)
+print("Press the power button to wipe, any other key to exit")
+
+result = pause(0x70F000F)
+
+if (!result.power)
+{
+	exit()
+}
+
+clear()
+println("")
+println("")
+println("")
+println("")
+color(0xFF0000)
+pr("Deleting system saves... ")
+f=readdir("bis:/save")
+if(f.folders.len()!=0){p("Folders in save dir???")pe()}
+# Only delete saves that are NOT in the important saves list
+f.files.foreach("x"){if(!is.contains(x)){if(delfile("bis:/save/"+x)){p("File deletion failed: ", x)pe()}}}
+pr("Done!\nImportant system saves preserved.")
+
+pr("\nDeleting user dirs...")ud=["Album","contents","save","saveMeta","temp"]
+if(mount("USER")){p("Mount failed!")pe()}
+ud.foreach("x"){pr("\n"+x,"")deldir("bis:/"+x)mkdir("bis:/"+x)}
+mkdir("bis:/contents/placehld")mkdir("bis:/contents/registered")
+color(0x00FF00)
+p("\n\n========================================")
+p("\nSystem wipe completed successfully!")
+p("\nThe console is ready to boot.")
+p("\n========================================")
+pause()

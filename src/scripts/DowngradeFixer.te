@@ -1,0 +1,144 @@
+#REQUIRE VER 4.0.0
+#REQUIRE KEYS
+#REQUIRE SD
+
+# DowngradeFixer - Fixes boot issues after downgrading from 21.0.0 to 20.5.0
+# Deletes problematic save file 8000000000000073 from SYSTEM partition
+
+confirmAction = {
+    clear()
+    println("")
+    println("")
+    println("")
+    println("")
+    color(0xFF00FF)
+    println("DowngradeFixer for TegraExplorer")
+    color(0x00CCCCCC)
+    println("")
+    color(0xFFFF00)
+    println("WARNING: This will delete save file 8000000000000073")
+    println("")
+    color(0x00CCCCCC)
+    println("Press A to confirm, any other button to cancel")
+    result = pause()
+    if (!result.a) {
+        clear()
+        exit()
+    }
+}
+
+downgradeFixSys = {
+    clear()
+    println("")
+    println("")
+    println("")
+    color(0xFF00FF)
+    println("Processing SysNAND...")
+    color(0x00CCCCCC)
+    if (mountsys("SYSTEM")) {
+        println("Failed to mount SysNAND SYSTEM!")
+        pause()
+        exit()
+    }
+
+    path = "bis:/save/8000000000000073"
+    found = fsexists(path)
+    if (found) {
+        if (delfile(path)) {
+            println("Failed to delete save file!")
+            pause()
+            exit()
+        }
+        println("Successfully deleted 8000000000000073")
+    }
+    if (!found) {
+        println("Save file 8000000000000073 not found (already fixed?)")
+    }
+}
+
+downgradeFixEmu = {
+    clear()
+    println("")
+    println("")
+    println("")
+    color(0xFF00FF)
+    println("Processing EmuNAND...")
+    color(0x00CCCCCC)
+    if (!emu()) {
+        println("No EmuNAND detected!")
+        pause()
+        exit()
+    }
+
+    if (mountemu("SYSTEM")) {
+        println("Failed to mount EmuNAND SYSTEM!")
+        pause()
+        exit()
+    }
+
+    path = "bis:/save/8000000000000073"
+    found = fsexists(path)
+    if (found) {
+        if (delfile(path)) {
+            println("Failed to delete save file!")
+            pause()
+            exit()
+        }
+        println("Successfully deleted 8000000000000073")
+    }
+    if (!found) {
+        println("Save file 8000000000000073 not found (already fixed?)")
+    }
+}
+
+clear()
+println("")
+println("")
+println("")
+println("")
+color(0xFF00FF)
+println("DowngradeFixer for TegraExplorer")
+color(0x00CCCCCC)
+println("")
+println("This script fixes boot issues after downgrading")
+println("from firmware 21.0.0 to 20.5.0")
+println("")
+println("It will delete the problematic save file:")
+println("  8000000000000073")
+println("")
+color(0xFFFF00)
+println("NOTE: Keys are automatically dumped by TegraExplorer")
+color(0x00CCCCCC)
+println("")
+
+options = ["SysNAND", "EmuNAND", "Both", "Exit"]
+choice = menu(options, 0)
+
+if (choice == 0) {
+    confirmAction()
+    downgradeFixSys()
+    println("")
+    color(0x00FF00)
+    println("Done! Press any key to continue...")
+    color(0x00CCCCCC)
+    pause()
+}
+if (choice == 1) {
+    confirmAction()
+    downgradeFixEmu()
+    println("")
+    color(0x00FF00)
+    println("Done! Press any key to continue...")
+    color(0x00CCCCCC)
+    pause()
+}
+if (choice == 2) {
+    confirmAction()
+    downgradeFixSys()
+    downgradeFixEmu()
+    println("")
+    color(0x00FF00)
+    println("Done! Press any key to continue...")
+    color(0x00CCCCCC)
+    pause()
+}
