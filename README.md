@@ -21,7 +21,7 @@ This package includes a curated collection of custom firmware components:
 - [MissionControl](https://github.com/ndeadly/MissionControl) (BLE branch, not public)
 - [Sphaira](https://github.com/ITotalJustice/sphaira)
 - [AIO Switch Updater](https://github.com/HamletDuFromage/aio-switch-updater)
-- [Lockpick_RCMDecScots](https://github.com/impeeza/Lockpick_RCMDecScots)
+- [Lockpick_RCM_Pro](https://github.com/sthetix/Lockpick_RCM_Pro)
 - [TegraExplorer](https://github.com/suchmememanyskill/TegraExplorer)
 
 ## Installation
