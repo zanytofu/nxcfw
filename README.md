@@ -24,6 +24,7 @@ This package includes a curated collection of custom firmware components:
 - [Lockpick_RCM_Pro](https://github.com/sthetix/Lockpick_RCM_Pro)
 - [TegraExplorer-Ext](https://github.com/sthetix/TegraExplorer-Ext)
 - [Furmark-NX](https://github.com/Anxietytimmy/Furmark-NX)
+- [nxcputest](https://github.com/Horizon-OC/nxcputest)
 
 ## Installation
 
