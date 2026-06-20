@@ -1,6 +1,6 @@
 [project]
 name = "nxcfw"
-version = "0.12.2"
+version = "0.13.0"
 description = "Custom firmware pack"
 authors = [
   { name = "zanytofu" },
@@ -18,7 +18,7 @@ dependencies = [
 packages = []
 
 [tool.bumpversion]
-current_version = "0.12.2"
+current_version = "0.13.0"
 tag = true
 tag_name = "v{new_version}"
 tag_message = "Bump version: {current_version} → {new_version}"
