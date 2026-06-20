@@ -1,6 +1,6 @@
 NXCFW v0.12.2
 
-Atmosphere (v1.11.1)
+Atmosphere (v1.11.2)
 Hekate (v6.5.3)
 Horizon-OC (v2.0.2)
 
