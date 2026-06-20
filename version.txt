@@ -4,6 +4,6 @@ Atmosphere (v1.11.2)
 Hekate (v6.5.3)
 Horizon-OC (v2.4.2)
 
-Compatible firmware 22.1.0
+Compatible firmware 22.5.0
 
 Source: https://github.com/zanytofu/nxcfw
