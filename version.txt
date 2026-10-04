@@ -1,7 +1,7 @@
 NXCFW v0.13.5
 
 Atmosphere (v1.11.2)
-Hekate (v6.5.3)
+Hekate (v6.5.4)
 Horizon-OC (v2.5.1)
 
 Compatible firmware 22.5.0
