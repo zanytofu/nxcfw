@@ -1,4 +1,4 @@
-NXCFW v0.13.5
+NXCFW v0.14.0
 
 Atmosphere (v1.12.1)
 Hekate (v6.5.4)
